@@ -1,0 +1,36 @@
+{
+    "retcode": 0,
+    "message": "OK",
+    "data": {
+        "avatar_list": [
+            {
+                "id": 1251,
+                "level": 60,
+                "name_mi18n": "Qingyi",
+                "full_name_mi18n": "Qingyi",
+                "element_type": 203,
+                "camp_name_mi18n": "Criminal Investigation Special Response Team",
+                "avatar_profession": 2,
+                "rarity": "S",
+                "group_icon_path": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f94573b427e3aee4dc1a70072442d130.png",
+                "hollow_icon_path": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/7301deff5fd4819279b81df33cc08ad4.png",
+                "rank": 2,
+                "is_chosen": false
+            },
+            {
+                "id": 1241,
+                "level": 60,
+                "name_mi18n": "Zhu Yuan",
+                "full_name_mi18n": "Zhu Yuan",
+                "element_type": 205,
+                "camp_name_mi18n": "Criminal Investigation Special Response Team",
+                "avatar_profession": 1,
+                "rarity": "S",
+                "group_icon_path": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f94573b427e3aee4dc1a70072442d130.png",
+                "hollow_icon_path": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/b8ce0ed0194e4f8510d8331687f990ed.png",
+                "rank": 0,
+                "is_chosen": false
+            }
+        ]
+    }
+}

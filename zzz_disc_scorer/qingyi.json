@@ -1,0 +1,397 @@
+{
+    "retcode": 0,
+    "message": "OK",
+    "data": {
+        "avatar_list": [
+            {
+                "id": 1251,
+                "level": 60,
+                "name_mi18n": "Qingyi",
+                "full_name_mi18n": "Qingyi",
+                "element_type": 203,
+                "camp_name_mi18n": "Criminal Investigation Special Response Team",
+                "avatar_profession": 2,
+                "rarity": "S",
+                "group_icon_path": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f94573b427e3aee4dc1a70072442d130.png",
+                "hollow_icon_path": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/7301deff5fd4819279b81df33cc08ad4.png",
+                "equip": [
+                    {
+                        "id": 31641,
+                        "level": 15,
+                        "name": "Swing Jazz [1]",
+                        "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f4e66360fb870ba091129037488b6b91.png",
+                        "rarity": "S",
+                        "properties": [
+                            {
+                                "property_name": "DEF",
+                                "property_id": 13102,
+                                "base": "14.4%"
+                            },
+                            {
+                                "property_name": "ATK",
+                                "property_id": 12103,
+                                "base": "38"
+                            },
+                            {
+                                "property_name": "CRIT DMG",
+                                "property_id": 21103,
+                                "base": "14.4%"
+                            },
+                            {
+                                "property_name": "HP",
+                                "property_id": 11102,
+                                "base": "3%"
+                            }
+                        ],
+                        "main_properties": [
+                            {
+                                "property_name": "HP",
+                                "property_id": 11103,
+                                "base": "2200"
+                            }
+                        ],
+                        "equip_suit": {
+                            "suit_id": 31600,
+                            "name": "Swing Jazz",
+                            "own": 4,
+                            "desc1": "Energy Regen +20%",
+                            "desc2": "Launching a \u003ccolor=#FFFFFF\u003eChain Attack\u003c/color\u003e or \u003ccolor=#FFFFFF\u003eUltimate\u003c/color\u003e increases all squad members' DMG by 15% for 12s. Passive effects of the same name do not stack."
+                        },
+                        "equipment_type": 1
+                    },
+                    {
+                        "id": 31242,
+                        "level": 15,
+                        "name": "Shockstar Disco [2]",
+                        "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/28b31894e6ea255c3395895f00dafb76.png",
+                        "rarity": "S",
+                        "properties": [
+                            {
+                                "property_name": "CRIT DMG",
+                                "property_id": 21103,
+                                "base": "9.6%"
+                            },
+                            {
+                                "property_name": "DEF",
+                                "property_id": 13103,
+                                "base": "15"
+                            },
+                            {
+                                "property_name": "DEF",
+                                "property_id": 13102,
+                                "base": "9.6%"
+                            },
+                            {
+                                "property_name": "CRIT Rate",
+                                "property_id": 20103,
+                                "base": "7.2%"
+                            }
+                        ],
+                        "main_properties": [
+                            {
+                                "property_name": "ATK",
+                                "property_id": 12103,
+                                "base": "316"
+                            }
+                        ],
+                        "equip_suit": {
+                            "suit_id": 31200,
+                            "name": "Shockstar Disco",
+                            "own": 2,
+                            "desc1": "Impact +6%",
+                            "desc2": "\u003ccolor=#FFFFFF\u003eBasic Attacks\u003c/color\u003e, \u003ccolor=#FFFFFF\u003eDash Attacks\u003c/color\u003e, and \u003ccolor=#FFFFFF\u003eDodge Counters\u003c/color\u003e inflict 20% more Daze to the main target."
+                        },
+                        "equipment_type": 2
+                    },
+                    {
+                        "id": 31643,
+                        "level": 15,
+                        "name": "Swing Jazz [3]",
+                        "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f4e66360fb870ba091129037488b6b91.png",
+                        "rarity": "S",
+                        "properties": [
+                            {
+                                "property_name": "CRIT Rate",
+                                "property_id": 20103,
+                                "base": "7.2%"
+                            },
+                            {
+                                "property_name": "CRIT DMG",
+                                "property_id": 21103,
+                                "base": "9.6%"
+                            },
+                            {
+                                "property_name": "HP",
+                                "property_id": 11102,
+                                "base": "6%"
+                            },
+                            {
+                                "property_name": "PEN",
+                                "property_id": 23203,
+                                "base": "9"
+                            }
+                        ],
+                        "main_properties": [
+                            {
+                                "property_name": "DEF",
+                                "property_id": 13103,
+                                "base": "184"
+                            }
+                        ],
+                        "equip_suit": {
+                            "suit_id": 31600,
+                            "name": "Swing Jazz",
+                            "own": 4,
+                            "desc1": "Energy Regen +20%",
+                            "desc2": "Launching a \u003ccolor=#FFFFFF\u003eChain Attack\u003c/color\u003e or \u003ccolor=#FFFFFF\u003eUltimate\u003c/color\u003e increases all squad members' DMG by 15% for 12s. Passive effects of the same name do not stack."
+                        },
+                        "equipment_type": 3
+                    },
+                    {
+                        "id": 31644,
+                        "level": 15,
+                        "name": "Swing Jazz [4]",
+                        "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f4e66360fb870ba091129037488b6b91.png",
+                        "rarity": "S",
+                        "properties": [
+                            {
+                                "property_name": "ATK",
+                                "property_id": 12102,
+                                "base": "9%"
+                            },
+                            {
+                                "property_name": "Anomaly Proficiency",
+                                "property_id": 31203,
+                                "base": "18"
+                            },
+                            {
+                                "property_name": "CRIT DMG",
+                                "property_id": 21103,
+                                "base": "9.6%"
+                            },
+                            {
+                                "property_name": "HP",
+                                "property_id": 11103,
+                                "base": "224"
+                            }
+                        ],
+                        "main_properties": [
+                            {
+                                "property_name": "CRIT Rate",
+                                "property_id": 20103,
+                                "base": "24%"
+                            }
+                        ],
+                        "equip_suit": {
+                            "suit_id": 31600,
+                            "name": "Swing Jazz",
+                            "own": 4,
+                            "desc1": "Energy Regen +20%",
+                            "desc2": "Launching a \u003ccolor=#FFFFFF\u003eChain Attack\u003c/color\u003e or \u003ccolor=#FFFFFF\u003eUltimate\u003c/color\u003e increases all squad members' DMG by 15% for 12s. Passive effects of the same name do not stack."
+                        },
+                        "equipment_type": 4
+                    },
+                    {
+                        "id": 31245,
+                        "level": 15,
+                        "name": "Shockstar Disco [5]",
+                        "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/28b31894e6ea255c3395895f00dafb76.png",
+                        "rarity": "S",
+                        "properties": [
+                            {
+                                "property_name": "Anomaly Proficiency",
+                                "property_id": 31203,
+                                "base": "18"
+                            },
+                            {
+                                "property_name": "HP",
+                                "property_id": 11102,
+                                "base": "6%"
+                            },
+                            {
+                                "property_name": "HP",
+                                "property_id": 11103,
+                                "base": "336"
+                            },
+                            {
+                                "property_name": "CRIT DMG",
+                                "property_id": 21103,
+                                "base": "4.8%"
+                            }
+                        ],
+                        "main_properties": [
+                            {
+                                "property_name": "ATK",
+                                "property_id": 12102,
+                                "base": "30%"
+                            }
+                        ],
+                        "equip_suit": {
+                            "suit_id": 31200,
+                            "name": "Shockstar Disco",
+                            "own": 2,
+                            "desc1": "Impact +6%",
+                            "desc2": "\u003ccolor=#FFFFFF\u003eBasic Attacks\u003c/color\u003e, \u003ccolor=#FFFFFF\u003eDash Attacks\u003c/color\u003e, and \u003ccolor=#FFFFFF\u003eDodge Counters\u003c/color\u003e inflict 20% more Daze to the main target."
+                        },
+                        "equipment_type": 5
+                    },
+                    {
+                        "id": 31646,
+                        "level": 15,
+                        "name": "Swing Jazz [6]",
+                        "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/f4e66360fb870ba091129037488b6b91.png",
+                        "rarity": "S",
+                        "properties": [
+                            {
+                                "property_name": "CRIT DMG",
+                                "property_id": 21103,
+                                "base": "9.6%"
+                            },
+                            {
+                                "property_name": "CRIT Rate",
+                                "property_id": 20103,
+                                "base": "7.2%"
+                            },
+                            {
+                                "property_name": "ATK",
+                                "property_id": 12103,
+                                "base": "19"
+                            },
+                            {
+                                "property_name": "ATK",
+                                "property_id": 12102,
+                                "base": "9%"
+                            }
+                        ],
+                        "main_properties": [
+                            {
+                                "property_name": "Impact",
+                                "property_id": 12202,
+                                "base": "18%"
+                            }
+                        ],
+                        "equip_suit": {
+                            "suit_id": 31600,
+                            "name": "Swing Jazz",
+                            "own": 4,
+                            "desc1": "Energy Regen +20%",
+                            "desc2": "Launching a \u003ccolor=#FFFFFF\u003eChain Attack\u003c/color\u003e or \u003ccolor=#FFFFFF\u003eUltimate\u003c/color\u003e increases all squad members' DMG by 15% for 12s. Passive effects of the same name do not stack."
+                        },
+                        "equipment_type": 6
+                    }
+                ],
+                "weapon": {
+                    "id": 14125,
+                    "level": 50,
+                    "name": "Ice-Jade Teapot",
+                    "star": 1,
+                    "icon": "https://act-webstatic.hoyoverse.com/darkmatter/nap/prod_gf_cn/item_icon_ua1dgb/52014ba5775ed06a043f6877e763988f.png",
+                    "rarity": "S",
+                    "properties": [
+                        {
+                            "property_name": "Impact",
+                            "property_id": 12202,
+                            "base": "18%"
+                        }
+                    ],
+                    "main_properties": [
+                        {
+                            "property_name": "Base ATK",
+                            "property_id": 12101,
+                            "base": "638"
+                        }
+                    ],
+                    "talent_title": "Ringing Melody",
+                    "talent_content": "When a \u003ccolor=#FFFFFF\u003eBasic Attack\u003c/color\u003e hits an enemy, gain 1 stack of \u003ccolor=#FFFFFF\u003eTea-riffic\u003c/color\u003e. Each stack of \u003ccolor=#FFFFFF\u003eTea-riffic\u003c/color\u003e increases the user's Impact by \u003ccolor=#2BAD00\u003e0.7%\u003c/color\u003e, stacking up to 30 times, and lasting for 8s. The duration of each stack is calculated separately. Upon acquiring \u003ccolor=#FFFFFF\u003eTea-riffic\u003c/color\u003e, if the equipper possesses stacks of \u003ccolor=#FFFFFF\u003eTea-riffic\u003c/color\u003e greater than or equal to 15, all squad members' DMG is increased by \u003ccolor=#2BAD00\u003e20%\u003c/color\u003e for 10s. Passive effects of the same name do not stack.",
+                    "profession": 2
+                },
+                "properties": [
+                    {
+                        "property_name": "HP",
+                        "property_id": 1,
+                        "base": "8250",
+                        "add": "3998",
+                        "final": "12248"
+                    },
+                    {
+                        "property_name": "ATK",
+                        "property_id": 2,
+                        "base": "1371",
+                        "add": "1031",
+                        "final": "2402"
+                    },
+                    {
+                        "property_name": "DEF",
+                        "property_id": 3,
+                        "base": "612",
+                        "add": "345",
+                        "final": "957"
+                    },
+                    {
+                        "property_name": "Impact",
+                        "property_id": 4,
+                        "base": "136",
+                        "add": "57",
+                        "final": "193"
+                    },
+                    {
+                        "property_name": "CRIT Rate",
+                        "property_id": 5,
+                        "base": "",
+                        "add": "",
+                        "final": "50.6%"
+                    },
+                    {
+                        "property_name": "CRIT DMG",
+                        "property_id": 6,
+                        "base": "",
+                        "add": "",
+                        "final": "107.6%"
+                    },
+                    {
+                        "property_name": "Anomaly Mastery",
+                        "property_id": 7,
+                        "base": "",
+                        "add": "",
+                        "final": "94"
+                    },
+                    {
+                        "property_name": "Anomaly Proficiency",
+                        "property_id": 8,
+                        "base": "",
+                        "add": "",
+                        "final": "129"
+                    },
+                    {
+                        "property_name": "PEN Ratio",
+                        "property_id": 9,
+                        "base": "",
+                        "add": "",
+                        "final": "0.0%"
+                    },
+                    {
+                        "property_name": "Energy Regen",
+                        "property_id": 10,
+                        "base": "1.20",
+                        "add": "0.24",
+                        "final": "1.44"
+                    },
+                    {
+                        "property_name": "PEN",
+                        "property_id": 232,
+                        "base": "",
+                        "add": "",
+                        "final": "9"
+                    },
+                    {
+                        "property_name": "Electric DMG Bonus",
+                        "property_id": 318,
+                        "base": "",
+                        "add": "",
+                        "final": "0.0%"
+                    }
+                ]
+            }
+        ]
+    }
+}
