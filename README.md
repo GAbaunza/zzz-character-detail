@@ -1,0 +1,1 @@
+# zzz-character-detail
