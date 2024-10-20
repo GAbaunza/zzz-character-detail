@@ -94,15 +94,15 @@ const calculateEquipmentScore = (equip: Equip): number => {
 
   const multipliers: Record<StatName, number> = {
     "ATK%": 1.8, // Higher value for ATK%
-    "Flat ATK": 0.1, // Low value for Flat ATK
+    "Flat ATK": 0.3, // Low value for Flat ATK
     "CRIT Rate": 3, // Even higher weight for CRIT Rate
     "CRIT DMG": 3, // Even higher weight for CRIT DMG
     "DEF%": 0.2, // Very low for DEF%
     "Flat DEF": 0.05, // Very low for Flat DEF
-    "HP%": 0.1, // Low for HP%
+    "HP%": 0.2, // Low for HP%
     "Flat HP": 0.05, // Low for Flat HP
     "PEN": 0.5, // Medium for Pen
-    "Anomaly Proficiency": 0.2, // Low weight
+    "Anomaly Proficiency": 0.5, // Low weight
   };
 
   function parseBaseValue(base: string): number {
@@ -170,6 +170,7 @@ const calculateEquipmentScore = (equip: Equip): number => {
     return mainScore;
   }
 
+  // we need to do this for types 4, 5 and 6
   if (equip.equipment_type === 4) {
     equip.main_properties.forEach((mainProp: Property) => {
       score += calculateMainStatScore(mainProp, equip.equipment_type);
