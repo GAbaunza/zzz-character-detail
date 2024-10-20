@@ -34,7 +34,9 @@ interface UserInventoryResponse {
 
 // Mock function to fetch the user's inventory
 const fetchUserInventory = async (id: string): Promise<Avatar[]> => {
-  const response = await fetch(`http://localhost:7000/basic?server=prod_gf_us&role_id=${id}`);
+  const response = await fetch(
+    `http://localhost:7000/basic?server=prod_gf_us&role_id=${id}`,
+  );
 
   if (!response.ok) {
     throw new Error(`Failed to fetch inventory for user with ID ${id}`);
@@ -45,8 +47,12 @@ const fetchUserInventory = async (id: string): Promise<Avatar[]> => {
 };
 
 // Function to fetch additional info for each avatar
-const fetchAvatarInfo = async (charaId: number, userId: string): Promise<AvatarInfoResponse> => {
-  const url = `http://localhost:7000/info?id_list[]=${charaId}&need_wiki=true&server=prod_gf_us&role_id=${userId}`;
+const fetchAvatarInfo = async (
+  charaId: number,
+  userId: string,
+): Promise<AvatarInfoResponse> => {
+  const url =
+    `http://localhost:7000/info?id_list[]=${charaId}&need_wiki=true&server=prod_gf_us&role_id=${userId}`;
   const response = await fetch(url);
 
   if (!response.ok) {
@@ -57,46 +63,86 @@ const fetchAvatarInfo = async (charaId: number, userId: string): Promise<AvatarI
   return avatarInfo;
 };
 
-// Placeholder function for calculating the "score" of equipment based on properties
 const calculateEquipmentScore = (equip: Equip): number => {
   let score = 0;
 
-  // Example: Sum up some "base" property values for score
-  equip.properties.forEach((prop: Property) => {
-    if (prop.property_id == 13102) { // DEF%
-      score += 0;
-    }
-    else if (prop.property_id == 13103) { // DEF
-      score += 0;
-    }
-    else if (prop.property_id == 11102) { // HP%
-      score += 0;
-    }
-    else if (prop.property_id == 11103) { // HP
-      score += 0;
-    }
-    else if (prop.property_id == 12102) { // ATK%
-      score += 0;
-    }
-    else if (prop.property_id == 12103) { // ATK
-      score += 0;
-    }
-    else if (prop.property_id == 20103) { // CRIT Rate
-      score += 0;
-    }
-    else if (prop.property_id == 21103) { // CRIT DMG
-      score += 0;
-    }
-    else if (prop.property_id == 23203) { // PEN
-      score += 0;
-    }
-    else if (prop.property_id == 31203) { // Anomaly Proficiency
-      score += 0;
-    }
-  });
+  type StatName =
+    | "ATK%"
+    | "Flat ATK"
+    | "CRIT Rate"
+    | "CRIT DMG"
+    | "DEF%"
+    | "Flat DEF"
+    | "HP%"
+    | "Flat HP"
+    | "PEN"
+    | "Anomaly Proficiency";
 
-  equip.main_properties.forEach((prop: Property) => {
-    score += parseFloat(prop.base) || 0;
+  const baseValues: Record<StatName, number> = {
+    "ATK%": 3,
+    "Flat ATK": 10,
+    "CRIT Rate": 2.4,
+    "CRIT DMG": 4.8,
+    "DEF%": 3,
+    "Flat DEF": 15,
+    "HP%": 3,
+    "Flat HP": 112,
+    "PEN": 9,
+    "Anomaly Proficiency": 9,
+  };
+
+  const multipliers: Record<StatName, number> = {
+    "ATK%": 1.8, // Higher value for ATK%
+    "Flat ATK": 0.1, // Low value for Flat ATK
+    "CRIT Rate": 3, // Even higher weight for CRIT Rate
+    "CRIT DMG": 3, // Even higher weight for CRIT DMG
+    "DEF%": 0.2, // Very low for DEF%
+    "Flat DEF": 0.05, // Very low for Flat DEF
+    "HP%": 0.1, // Low for HP%
+    "Flat HP": 0.05, // Low for Flat HP
+    "PEN": 0.5, // Medium for Pen
+    "Anomaly Proficiency": 0.2, // Low weight
+  };
+
+  function parseBaseValue(base: string): number {
+    return parseFloat(base.replace("%", ""));
+  }
+
+  function calculateLevelUps(stat: StatName, currentValue: number): number {
+    const baseValue = baseValues[stat];
+    if (currentValue > baseValue) {
+      return Math.floor((currentValue - baseValue) / baseValue);
+    }
+    return 0;
+  }
+
+  equip.properties.forEach((prop: Property) => {
+    const currentValue = parseBaseValue(prop.base);
+    let statName: StatName | undefined = undefined;
+
+    // Map property_id to the appropriate stat name
+    if (prop.property_id == 12102) {
+      statName = "ATK%";
+    } else if (prop.property_id == 12103) {
+      statName = "Flat ATK";
+    } else if (prop.property_id == 20103) {
+      statName = "CRIT Rate";
+    } else if (prop.property_id == 21103) {
+      statName = "CRIT DMG";
+    } else if (prop.property_id == 13102) {
+      statName = "DEF%";
+    } else if (prop.property_id == 13103) {
+      statName = "Flat DEF";
+    } else if (prop.property_id == 11102) {
+      statName = "HP%";
+    }
+
+    if (statName) {
+      const levelUps = calculateLevelUps(statName, currentValue);
+      const multiplier = multipliers[statName];
+
+      score += (1 + levelUps) * currentValue * multiplier;
+    }
   });
 
   return score;
@@ -129,7 +175,7 @@ router.get("/user/:id", async (ctx) => {
       ctx.response.body = avatarInfoList;
     } catch (_error) {
       ctx.response.status = 404;
-      ctx.response.body = { error: 'Not found' };
+      ctx.response.body = { error: "Not found" };
     }
   } else {
     ctx.response.status = 400;
