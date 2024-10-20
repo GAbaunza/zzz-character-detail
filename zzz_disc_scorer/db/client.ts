@@ -2,11 +2,14 @@ import { Client } from "https://deno.land/x/postgres@v0.17.0/mod.ts";
 
 // Create a new PostgreSQL client
 const client = new Client({
-  user: 'root',
+  user: 'zzz_user',
   database: 'zzz_builds',
-  hostname: 'localhost',
-  password: 'root',
+  hostname: '',
+  password: '',
   port: 5432,
+  tls: {
+    enforce: false, // Disable TLS
+  },
 });
 
 // Connect to the database
