@@ -11,6 +11,7 @@ interface Equip {
   name: string;
   properties: Property[];
   main_properties: Property[];
+  equipment_type: number;
   score?: number; // This will be calculated later
 }
 
@@ -144,6 +145,36 @@ const calculateEquipmentScore = (equip: Equip): number => {
       score += (1 + levelUps) * currentValue * multiplier;
     }
   });
+
+  function calculateMainStatScore(
+    mainProperty: Property,
+    equipmentType: number,
+  ): number {
+    const mainValue = parseBaseValue(mainProperty.base);
+    let mainScore = 0;
+
+    if (equipmentType === 4) {
+      if (
+        mainProperty.property_id === 11102 || mainProperty.property_id === 13102
+      ) { // HP% or DEF%
+        mainScore -= mainValue * 1.5; // Heavy penalty for HP% or DEF% as main stat
+      }
+    } else if (equipmentType === 5 || equipmentType === 6) {
+      if (
+        mainProperty.property_id === 11102 || mainProperty.property_id === 13102
+      ) { // HP% or DEF%
+        mainScore -= mainValue * 1.5; // Heavy penalty for HP% or DEF%
+      }
+    }
+
+    return mainScore;
+  }
+
+  if (equip.equipment_type === 4) {
+    equip.main_properties.forEach((mainProp: Property) => {
+      score += calculateMainStatScore(mainProp, equip.equipment_type);
+    });
+  }
 
   return score;
 };
